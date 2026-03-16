@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle do Edital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav class="main-nav">
+  <div class="nav-container">
+
+    <div class="nav-brand">
+      <span class="nav-title">Edital</span>
+    </div>
+
+    <button class="nav-toggle" aria-label="Abrir menu">
+      ☰
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Visão geral</a></li>
+      <li><a href="hoje.html">Hoje</a></li>
+      <li><a href="ciclo.html">Ciclo</a></li>
+      <li><a href="estatisticas.html">Estatísticas</a></li>
+      <li><a href="config.html">Configurações</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<header>
+  <div class="header-top">
+    <h1>Controle do Edital</h1>
+    <span class="subtitle">progresso geral</span>
+  </div>
+
+  <!-- Barra de progresso geral -->
+  <div class="global-progress">
+    <div class="global-progress-fill" id="global-progress-fill"></div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="grid">
+
+    <!-- I -->
+    <a class="card" data-materia="direito-penal" href="materias/penal.html">
+      <span class="emoji-bg">⚖️</span>
+      <h3>I. Direito Penal</h3>
+      <small>Crimes, penas, direito penal</small>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <span class="progress-text">0%</span>
+    </a>
+
+    <!-- II -->
+    <a class="card" data-materia="direito-constitucional" href="materias/const.html">
+      <span class="emoji-bg">📜</span>
+      <h3>II. Direito Constitucional</h3>
+      <small>Constituição, direitos fundamentais</small>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <span class="progress-text">0%</span>
+    </a>
+
+    <!-- III -->
+    <a class="card" data-materia="direito-civil" href="materias/civ.html">
+      <span class="emoji-bg">📚</span>
+      <h3>III. Direito Civil</h3>
+      <small>Contratos, propriedade, obrigações</small>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <span class="progress-text">0%</span>
+    </a>
+
+    <!-- IV -->
+    <a class="card" data-materia="direito-processual-civil" href="materias/procciv.html">
+      <span class="emoji-bg">⚔️</span>
+      <h3>IV. Direito Processual Civil</h3>
+      <small>Processo civil, ações, recursos</small>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <span class="progress-text">0%</span>
+    </a>
+
+    <!-- V -->
+    <a class="card" data-materia="direito-processual-penal" href="materias/procpen.html">
+      <span class="emoji-bg">🔨</span>
+      <h3>XI. Direito Processual Penal</h3>
+      <small>Processo penal, prisão, julgamento</small>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <span class="progress-text">0%</span>
+    </a>
+
+    <!-- XII -->
+    <a class="card" data-materia="direito-administrativo" href="materias/adm.html">
+      <span class="emoji-bg">📋</span>
+      <h3>XII. Direito Administrativo</h3>
+      <small>Administração pública, licitações</small>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <span class="progress-text">0%</span>
+    </a>
+
+  </section>
+</main>
+
+<script src="js.js"></script>
+</body>
+</html>

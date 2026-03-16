@@ -1,0 +1,336 @@
+/* ESTILO: COZY DARK ACADEMIA (CONFIG MODE)
+   PALETA: Ébano, Avelã Suave e Creme
+*/
+
+:root {
+  --bg-dark: #121212;           /* Fundo carvão suave */
+  --panel-bg: #1c1917;          /* Madeira escura/café */
+  --accent: #d4a373;            /* Avelã/Caramelo */
+  --highlight: #faedcd;         /* Creme/Luz de vela */
+  --text-main: #e6e1dd;         /* Texto principal confortável */
+  --text-dim: #a59d95;          /* Texto secundário */
+  --border: rgba(212, 163, 115, 0.15);
+  --shadow-cozy: rgba(0, 0, 0, 0.4);
+}
+
+/* ---------------- RESET & BASE ---------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lora', 'EB Garamond', serif; /* Fontes que escolhemos antes */
+}
+
+body {
+  background-color: var(--bg-dark);
+  background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #121212 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ---------------- NAV (Acolhedora) ---------------- */
+
+.main-nav {
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 16px;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-title {
+  font-family: 'EB Garamond', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  font-style: italic;
+  transition: 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--highlight);
+  text-shadow: 0 0 8px rgba(250, 237, 205, 0.2);
+}
+
+/* ---------------- HEADER ---------------- */
+
+header {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 16px 20px;
+}
+
+header h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  color: var(--highlight);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--accent);
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cycle-summary {
+  margin-top: 20px;
+  display: flex;
+  gap: 25px;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  font-family: 'EB Garamond', serif;
+}
+
+/* ---------------- PANELS (Efeito de Papel Antigo Dark) ---------------- */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 16px 100px;
+  display: grid;
+  gap: 25px;
+}
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  background: var(--panel-bg);
+  box-shadow: 0 10px 30px var(--shadow-cozy);
+}
+
+.panel h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+/* ---------------- CONFIG & INPUTS ---------------- */
+
+.config-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.config-item label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.config-item input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border);
+  color: var(--highlight);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.config-item input:focus {
+  border-color: var(--accent);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* ---------------- WEEKDAYS ---------------- */
+
+.weekdays {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.weekdays button {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.weekdays button.active {
+  background: var(--accent);
+  color: var(--bg-dark);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------------- SUBJECTS (Linhas Elegantes) ---------------- */
+
+.cycle-subjects {
+  display: grid;
+  gap: 12px;
+}
+
+.subject-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: 0.3s;
+}
+
+.subject-row:hover {
+  background: rgba(212, 163, 115, 0.05);
+}
+
+.subject-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.percent-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.percent-controls button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.percent-controls button:hover {
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+.percent-controls span {
+  min-width: 45px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--highlight);
+  font-variant-numeric: tabular-nums;
+}
+
+.subject-hours {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* ---------------- WEEK PREVIEW ---------------- */
+
+.week-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+}
+
+.day-column {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px 10px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.day-column strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent);
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+}
+
+/* ---------------- ACTIONS ---------------- */
+
+.actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.actions button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  font-style: italic;
+  transition: 0.3s;
+}
+
+.actions button:hover {
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+.actions .danger {
+  color: var(--danger-soft);
+  border-color: var(--danger-soft);
+}
+
+.actions .danger:hover {
+  background: var(--danger-soft);
+  color: white;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .subject-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .percent-controls { justify-content: center; }
+  .actions { flex-direction: column; }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ciclo — Controle do Edital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ciclo.css">
+</head>
+
+<body>
+
+<nav class="main-nav">
+  <div class="nav-container">
+    <span class="nav-title">Edital</span>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Visão geral</a></li>
+      <li><a href="hoje.html">Hoje</a></li>
+      <li><a href="ciclo.html" class="active">Ciclo</a></li>
+      <li><a href="estatisticas.html">Estatísticas</a></li>
+      <li><a href="config.html">Configurações</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+  <div class="header-top">
+    <h1>Ciclo de Estudos</h1>
+    <span class="subtitle">planejamento semanal por peso</span>
+  </div>
+
+  <div class="cycle-summary">
+    <span>Horas/dia: <strong id="hours-per-day">0</strong></span>
+    <span>Horas/semana: <strong id="hours-per-week">0</strong></span>
+    <span>Total distribuído: <strong id="percent-used">0%</strong></span>
+    <span style="display: none;">Fim: <strong id="cycle-end"></strong></span>
+  </div>
+
+  <div class="global-progress">
+    <div class="global-progress-fill" id="percent-bar" style="width: 0%;"></div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="panel">
+    <h3>Configuração geral</h3>
+
+    <div class="config-grid">
+      <div class="config-item">
+        <label for="daily-hours">Horas de estudo por dia</label>
+        <input type="number" id="daily-hours" min="1" max="12" value="6">
+      </div>
+
+      <div class="config-item">
+        <label>Dias ativos</label>
+        <div class="weekdays" id="weekdays">
+          <button type="button" data-day="1">Seg</button>
+          <button type="button" data-day="2">Ter</button>
+          <button type="button" data-day="3">Qua</button>
+          <button type="button" data-day="4">Qui</button>
+          <button type="button" data-day="5">Sex</button>
+          <button type="button" data-day="6">Sáb</button>
+          <button type="button" data-day="0">Dom</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h3>Distribuição do ciclo</h3>
+
+    <div class="cycle-subjects" id="cycle-subjects">
+      </div>
+  </section>
+
+  <section class="panel">
+    <h3>Preview da semana</h3>
+
+    <div class="week-preview" id="week-preview">
+      </div>
+  </section>
+
+  <section class="panel actions">
+    <button id="save-cycle">Salvar ciclo</button>
+    <button id="reset-cycle" class="danger">Resetar ciclo</button>
+  </section>
+
+</main>
+
+<script src="ciclo.js"></script>
+</body>
+</html>

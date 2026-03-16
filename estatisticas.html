@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estatísticas Avançadas</title>
+  <link rel="stylesheet" href="ciclo.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .stats-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+    .card-full { grid-column: 1 / -1; }
+    .chart-box { min-height: 300px; position: relative; }
+    .big-number { font-size: 2.5rem; font-weight: bold; color: var(--primary); display: block; }
+    .stat-label { color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; }
+    @media (max-width: 800px) { .stats-container { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav class="main-nav">
+  <div class="nav-container">
+    <span class="nav-title">Edital</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Visão geral</a></li>
+      <li><a href="hoje.html">Hoje</a></li>
+      <li><a href="ciclo.html">Ciclo</a></li>
+      <li><a href="estatisticas.html">Estatísticas</a></li>
+      <li><a href="config.html">Configurações</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container">
+  <header>
+    <h1>Dashboard de Performance</h1>
+    <div class="cycle-summary">
+      <div><span class="stat-label">Total Hoje</span><span class="big-number" id="total-today">0h</span></div>
+      <div><span class="stat-label">Eficiência</span><span class="big-number" id="efficiency-pc">0%</span></div>
+      <div><span class="stat-label">Meta Semanal</span><span class="big-number" id="weekly-goal-hrs">0h</span></div>
+    </div>
+  </header>
+
+  <div class="stats-container">
+    <section class="panel">
+      <h3>Execução Diária (Minutos)</h3>
+      <div class="chart-box">
+        <canvas id="chart-daily"></canvas>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3>Equilíbrio Semanal (Radar)</h3>
+      <p style="font-size: 0.8rem; color: #888; margin-bottom: 10px;">Quanto mais regular o gráfico, mais equilibrado está seu estudo.</p>
+      <div class="chart-box">
+        <canvas id="chart-radar"></canvas>
+      </div>
+    </section>
+
+    <section class="panel card-full">
+      <h3>Detalhamento por Matéria</h3>
+      <div id="table-stats-detailed"></div>
+    </section>
+  </div>
+</main>
+
+<script src="estatisticas.js"></script>
+</body>
+</html>
