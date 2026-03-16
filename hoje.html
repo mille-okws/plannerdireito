@@ -1,88 +1,266 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoje — Execução</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="hoje.css">
+<meta charset="UTF-8">
+<title>Controle do Edital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
+<!-- MENU -->
 <nav class="main-nav">
-  <div class="nav-container">
-    <span class="nav-title">SISTEMA_EDITAL</span>
-    <ul class="nav-links">
-      <li><a href="index.html">Visão geral</a></li>
-      <li><a href="hoje.html">Hoje</a></li>
-      <li><a href="ciclo.html">Ciclo</a></li>
-      <li><a href="estatisticas.html">Estatísticas</a></li>
-      <li><a href="config.html">Configurações</a></li>
-    </ul>
-  </div>
+
+<div class="nav-container">
+
+<div class="nav-brand">
+<span class="nav-title">Edital</span>
+</div>
+
+<button class="nav-toggle" aria-label="Abrir menu">
+☰
+</button>
+
+<ul class="nav-links">
+
+<li>
+<a href="./index.html">
+Visão geral
+</a>
+</li>
+
+<li>
+<a href="./hoje.html">
+Hoje
+</a>
+</li>
+
+<li>
+<a href="./ciclo.html">
+Ciclo
+</a>
+</li>
+
+<li>
+<a href="./estatisticas.html">
+Estatísticas
+</a>
+</li>
+
+<li>
+<a href="./config.html">
+Configurações
+</a>
+</li>
+
+</ul>
+
+</div>
 </nav>
 
+
+<header>
+
+<div class="header-top">
+<h1>Controle do Edital</h1>
+<span class="subtitle">progresso geral</span>
+</div>
+
+<div class="global-progress">
+<div id="global-progress-fill"></div>
+</div>
+
+</header>
+
+
 <main class="container">
-  <header>
-    <h1>Execução diária</h1>
-    <p id="current-date-display">—</p>
 
-    <div class="cycle-summary">
-      <span>Meta: <strong id="daily-target">0h</strong></span>
-      <span>Estudado: <strong id="daily-done">0h 00m</strong></span>
-    </div>
+<section class="grid">
 
-    <div class="global-progress">
-      <div class="global-progress-fill" id="daily-progress-bar"></div>
-    </div>
-  </header>
+<!-- DIREITO PENAL -->
 
-  <section class="today-grid">
-    <section>
-      <section class="timer-section">
-        <h2 id="active-subject-title">Selecione uma matéria</h2>
-        <div class="timer-container">
-          <div class="timer-bg">88:88:88</div>
-          <div class="timer-display" id="main-timer">00:00:00</div>
-        </div>
+<a class="card" data-materia="direito-penal" href="./materias/penal.html">
 
-        <div class="timer-controls">
-          <button id="btn-start">Iniciar</button>
-          <button id="btn-pause">Pausar</button>
-          <button id="btn-stop" class="danger">Finalizar</button>
-        </div>
-      </section>
+<span class="emoji-bg">⚖️</span>
 
-      <section class="panel">
-        <h3>Matérias de hoje</h3>
-        <div id="today-subjects-list">
-          <div class="subject-card active">
-            <div class="subject-info">
-              <strong>Direito Constitucional</strong>
-              <small>Progresso: 45%</small>
-              <div class="progress-mini">
-                <div class="progress-mini-fill" style="width: 45%;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
+<h3>I. Direito Penal</h3>
 
-    <aside>
-      <section class="panel">
-        <h3>Log de sessões</h3>
-        <div class="session-log" id="session-log-list">
-          <p class="empty-log">Nenhuma sessão registrada.</p>
-        </div>
-        <button id="btn-clear-logs" class="danger" style="width: 100%; margin-top: 15px;">
-          Limpar Progresso
-        </button>
-      </section>
-    </aside>
-  </section>
+<small>
+Crimes, penas, direito penal
+</small>
+
+<div class="progress-bar">
+<div class="progress-fill"></div>
+</div>
+
+<span class="progress-text">0%</span>
+
+</a>
+
+
+<!-- DIREITO CONSTITUCIONAL -->
+
+<a class="card" data-materia="direito-constitucional" href="./materias/const.html">
+
+<span class="emoji-bg">📜</span>
+
+<h3>II. Direito Constitucional</h3>
+
+<small>
+Constituição, direitos fundamentais
+</small>
+
+<div class="progress-bar">
+<div class="progress-fill"></div>
+</div>
+
+<span class="progress-text">0%</span>
+
+</a>
+
+
+<!-- DIREITO CIVIL -->
+
+<a class="card" data-materia="direito-civil" href="./materias/civ.html">
+
+<span class="emoji-bg">📚</span>
+
+<h3>III. Direito Civil</h3>
+
+<small>
+Contratos, propriedade, obrigações
+</small>
+
+<div class="progress-bar">
+<div class="progress-fill"></div>
+</div>
+
+<span class="progress-text">0%</span>
+
+</a>
+
+
+<!-- PROCESSUAL CIVIL -->
+
+<a class="card" data-materia="direito-processual-civil" href="./materias/procciv.html">
+
+<span class="emoji-bg">⚔️</span>
+
+<h3>IV. Direito Processual Civil</h3>
+
+<small>
+Processo civil, ações, recursos
+</small>
+
+<div class="progress-bar">
+<div class="progress-fill"></div>
+</div>
+
+<span class="progress-text">0%</span>
+
+</a>
+
+
+<!-- PROCESSUAL PENAL -->
+
+<a class="card" data-materia="direito-processual-penal" href="./materias/procpen.html">
+
+<span class="emoji-bg">🔨</span>
+
+<h3>V. Direito Processual Penal</h3>
+
+<small>
+Processo penal, prisão, julgamento
+</small>
+
+<div class="progress-bar">
+<div class="progress-fill"></div>
+</div>
+
+<span class="progress-text">0%</span>
+
+</a>
+
+
+<!-- DIREITO ADMINISTRATIVO -->
+
+<a class="card" data-materia="direito-administrativo" href="./materias/adm.html">
+
+<span class="emoji-bg">📋</span>
+
+<h3>VI. Direito Administrativo</h3>
+
+<small>
+Administração pública, licitações
+</small>
+
+<div class="progress-bar">
+<div class="progress-fill"></div>
+</div>
+
+<span class="progress-text">0%</span>
+
+</a>
+
+
+</section>
+
 </main>
 
-<script src="hoje.js"></script>
+
+
+<script>
+
+
+/* MENU MOBILE */
+
+const toggle = document.querySelector(".nav-toggle")
+
+const links = document.querySelector(".nav-links")
+
+toggle.addEventListener("click", () => {
+
+links.classList.toggle("open")
+
+})
+
+
+
+/* PROGRESSO DAS MATÉRIAS */
+
+let total = 0
+let count = 0
+
+document.querySelectorAll(".card").forEach(card => {
+
+const materia = card.dataset.materia
+
+const progresso = Number(localStorage.getItem(materia) || 0)
+
+const fill = card.querySelector(".progress-fill")
+
+const text = card.querySelector(".progress-text")
+
+fill.style.width = progresso + "%"
+
+text.textContent = progresso + "%"
+
+total += progresso
+count++
+
+})
+
+
+/* PROGRESSO GLOBAL */
+
+const media = count > 0 ? total / count : 0
+
+const globalBar = document.getElementById("global-progress-fill")
+
+globalBar.style.width = media + "%"
+
+
+</script>
+
 </body>
 </html>
