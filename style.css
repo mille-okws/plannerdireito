@@ -359,3 +359,11 @@ body::after{
   from{transform:translateY(0)}
   to{transform:translateY(-400px)}
 }
+
+.nav-links{
+display:none;
+}
+
+.nav-links.open{
+display:block;
+}
